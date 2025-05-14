@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aulytech Sales & Distributors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 100%;
+            min-width: 100%;
+
+            
+        }
+        .divisions{
+            width: 100%;
+            overflow-x: hidden;
+            background-color: azure;
+            min-height: 30%;
+        }
+
+        /* Navigation Bar */
+        .nav-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px 0;
+            list-style: none;
+            background-color: blue;
+            position: relative;
+        }
+
+        .nav-list {
+            padding: 10px 15px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar li:hover {
+            background: linear-gradient(to right, #ffcc00, #8400ff);
+            border-radius: 5px;
+        }
+
+        /* Logo Section */
+        #logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            position: sticky;
+        }
+
+        .log {
+        
+        }
+        .log1{
+            
+
+        }
+        .log1 img{
+            width: 100%;
+            max-width: 170px;
+            height: 70%;
+            border-radius: 20%;
+            animation-delay: 1sec;
+
+        }
+        .title{
+            animation-delay: 0.5sec;
+        }
+
+        .title h1 {
+            font-family: Algerian, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            animation-delay: 1.5sec;
+        }
+
+        .helpline {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        /* Main Content */
+        .my {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            z-index: 10000;
+        }
+
+        .moving-text {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 8s linear infinite;
+            position: sticky;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .last {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .myimg {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        video {
+            width: 100%;
+            max-width: 400px;
+        }
+        .descriptions {
+            width: 100%;
+            height: 80vh;
+    
+            align-items:left;
+            overflow: hidden;
+            background-image: url('display.png');
+            background-size: 100% 100%;
+            opacity: 1;
+            overflow-x: hidden;
+     
+      
+      background-repeat: no-repeat;
+      margin: 0; 
+      opacity: 1;
+        }
+
+        .descriptions img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            padding-bottom: 5%;
+            object-fit: contain;
+            position: absolute;
+            opacity: 0;
+            animation: movePause 10s linear infinite;
+                }
+      @keyframes slide {
+        from {
+          transform: translateX(0%);
+       }
+      to {
+     transform: translateX(100%);
+  }
+}
+@keyframes movePause {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(10%); 
+  }
+  50% {
+    transform: translateX(20%); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}
+
+        .descriptions img.active {
+            opacity: 1;
+        }
+
+        /* Product Section */
+        #products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        #mains {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            height: fit-content;
+            
+        }
+
+        .myimg1 {
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            border-color: black;
+            box-shadow: #8400ff;
+            
+            background-color: #d2e28c;
+            overflow: hidden;
+        }
+        .poshos {
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            border-color: black;
+            box-shadow: #8400ff;
+            transition: transform  ease-in-out;
+            transform: translateY(-7px);
+        transition-delay: 0.5s;
+        background-color: #d2e28c;
+
+        
+        
+
+            overflow: hidden;
+        }
+        .poshos.hover{
+            transform: scale(1.2);
+
+            
+
+        }
+
+        .poshos img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .myimg1 img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        #end {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            height: 50%;
+            border-top-left-radius: 4%;
+            border-top-right-radius: 4%;
+        }
+
+        .cut {
+            flex: 1;
+            min-width: 250px;
+            color: aliceblue;
+            padding-left: 20px;
+            
+            
+        }
+        .cut li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+        .end1 a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu-toggle {
+            display: none;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 40%;
+            position: relative;
+    z-index: 1100;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #logo {
+                flex-direction: column;
+                text-align: center;
+            }
+            .log{
+                flex-direction: column;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar ul li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .last {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .myimg1 {
+                max-width: 180px;
+            }
+        }
+        #more{
+            text-align: center;
+
+        }
+        .accounts{
+            height: fit-content;
+            background-color: black;
+            background-size: cover;
+            align-items: center;
+            display: grid;
+            list-style: none;
+        }
+        .none{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 10px;
+        }
+        .dropdown{
+            display: none;
+            list-style: none;
+            flex-direction: column;
+           
+            
+
+        }
+        .nav-list  li:hover .dropdown{
+            display: block;
+            position: absolute;
+            background-color: blue;
+            list-style: none;
+           
+            .up{
+                color: aliceblue;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        #order {
+            background-color: beige;
+            height: 100%;
+            align-items: center;
+            color: black;
+            gap: 10px;
+        }
+
+        #order:hover{
+            background-color: beige;
+            height: 100%;
+            align-items: center;
+            color: blue;
+            gap: 10px;
+        }
+        .orderbutton{
+            align-items: center;
+            position: center;
+
+        }
+        .orderbutton:hover{
+            background-color: green;
+            transform: translateY;
+            color: white;
+            font-size: 20px;
+        }
+        .note{
+            text-align: center;
+            font-family: pacifico;
+        }
+        .make-order{
+            font-family: algerian;
+
+        }
+        .make-order:hover{
+            color: blue;
+            
+
+        }
+        
+       
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="divisions">
+        <div id="logo">
+            <div class="log"><div class="log1"><img src="log.png">
+            </div>
+            </div>
+            <div class="title">
+                <h1>...ACHIEVERS... <br>TECH SOLUTIONS</h1>
+            </div>
+            <div class="helpline">Helpline (+254) 113795338</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="menu-toggle">☰ </div>
+            <ul class="nav-list">
+                <li><a href="trying.html">Home</a></li>
+                <li><a href="#">products
+                    <i class="fas fa-caret-down"></i>
+                </a>
+            <div class="dropdown"><ul>
+                <li><a href="combinedposhomills.html">combined mills</a></li>
+                <li><a href="rollermills.html">Roller mills</a></li>
+                <li><a href="hammermills.html">Hammer mills</a></li>
+                <li><a href="shaffcutters.html">shaffcutters</a></li>
+                <li><a href="#related">related products</a></li>
+            </ul></div></li>
+                <li><a href="#more">About us</a></li>
+                <li><a href="delivery web.html">Delivery & Shipping</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li>
+                    <input type="text" placeholder="Search anything..." />
+                    <button>Search</button>
+                </li>
+                <li><a href="#order"><h2 class="make-order">Make your order</h2></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Welcome Section -->
+    
+    <div class="descriptions">
+       
+    </div><div id="more">
+
+        <p>
+            <h4><i>We are a company that specializes in supply and sale of <b class="poshoo">high-quality posho mills</b> and other homestead machines in Kenya.<br> We stock a wide variety made locally and imported from India. As experienced posho mill suppliers,<br> we are committed to bring our clients quality products, offer them professional consultation and bring the most efficient solutions to their milling needs</i></h4>
+        </p>
+        <a href="next.html"><button id="more">click for more</button></a>
+    </div>
+         </div>
+
+    <!-- Products -->
+     <div id="mains">
+        <div class="poshos">
+            <img src="hammer1.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price:iuhjhgujghgukgbkugbyuhjngbyuhjngbyhbngbhb $125.00</p>
+            <a href="#order"><button>Order Now</button><br><button>related products</button></a>
+        </div>
+        <div class="poshos">
+            <img src="hammer2.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price:iuhjhgujghgukgbkugbyuhjngbyuhjngbyhbngbhb $125.00</p>
+            <a href="#order" target="_blank"><button>Order Now</button><br><button>related products</button></a>
+        </div>
+        <div class="poshos">
+            <img src="hammer3.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price:iuhjhgujghgukgbkugbyuhjngbyuhjngbyhbngbhb $125.00</p>
+            <a href="#order" target="_blank"><button>Order Now</button><br><button>related products</button></a>
+        </div>
+        
+        <div class="poshos">
+            <img src="combined2.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price:iuhjhgujghgukgbkugbyuhjngbyuhjngbyhbngbhb $125.00</p>
+            <a href="#order" target="_blank"><button>Order Now</button><br><button>related products</button></a>
+        </div>
+    <div class="poshos">
+        <img src="roller.jpg" alt="Pressure Washer">
+        <p>Pressure Washer <br> Price:iuhjhgujghgukgbkugbyuhjngbyuhjngbyhbngbhb $125.00</p>
+        <a href="#order" target="_blank"><button>Order Now</button><br><button>related products</button></a>
+    </div>
+
+
+
+
+</div>    <button>view all</button>
+
+    <div id="products"><div id="related"><h2>Other products</h2></div>
+        <div class="myimg1">
+            <img src="pressure washer.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price: $125.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div>
+
+        <div class="myimg1">
+            <img src="pressure washer.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price: $125.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div><div class="myimg1">
+            <img src="pressure washer.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price: $125.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div><div class="myimg1">
+            <img src="pressure washer.jpg" alt="Pressure Washer">
+            <p>Pressure Washer <br> Price: $125.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div>
+
+        <div class="myimg1">
+            <img src="hisaki.jpeg" alt="Hisaki Generator">
+            <p>Hisaki Generator <br> Price: $150.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div>
+
+        <div class="myimg1">
+            <img src="petrol.png" alt="Petrol Generator">
+            <p>Petrol Generator <br> Price: $147.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div>
+
+        <div class="myimg1">
+            <img src="vacuum cleaner.png" alt="Vacuum Cleaner">
+            <p>Vacuum Cleaner <br> Price: $140.00</p>
+            <a href="#order"><button>Order Now</button></a>
+        </div>
+    </div><div id="order">
+        <h3><i><u>Place your order</u></i></h3><br><br>
+        <label>Product Name:</label>
+        <input type ="text" id="product" placeholder="Enter the product name"><br><br>
+        <label>Quantity:</label>
+        <input type ="text" id="quantity" placeholder="Enter Quantity"><br><br>
+        <label>Delivery location:</label>
+        <input type ="text" id="location" placeholder="Enter delivery location"><br><br><br>
+            <button onclick="placeorder()" class="orderbutton">place order</button><br><br> <h4><i>Or call us on: 0113795338</i></h4>
+            <h3 class="note"><i>payments  done upon delivery</i><h3><br>
+
+    
+</div>
+
+    <!-- Footer -->
+    <div id="end">
+        <div class="cut">
+            <img src="log.png">
+            <h2>...ACHIEVERS... <br>TECH SOLUTIONS</h2>
+
+           
+        </div><div class="cut">
+            <h3><i><b>Useful links</b></i></h3>
+            <p class="up"><a href="trying.html">Home</a></p>
+            <p class="up"><a href="contact form.html">Contact Us</a></p>
+            <p class="up"><a href="location.html">Location</a></p>
+            <p class="up"><a href="F.A.Qs.html">FAQs</a></p>
+            <p class="up"><a href="next.html">Machines</a></p>
+        </div>
+
+        <div class="cut">
+            <h3>Contact Us</h3>
+            <p><a href="https://wa.me/254113795338">WhatsApp</a></p>
+            <p><a href="https://telegram.me/254113795338">Telegram</a></p>
+            <p><a href="#">Call Us</a></p>
+            
+        </div><div class="cut">
+            <h2> in association with</h2><br>
+            <a href="https://example.com">
+                <img src="https://example.com/image.jpg" alt="association">
+            </a><a href="https://example.com">
+                <img src="https://example.com/image.jpg" alt=" association">
+            </a><a href="https://example.com">
+                <img src="https://example.com/image.jpg" alt=" association">
+            </a><a href="https://example.com">
+                <img src="https://example.com/image.jpg" alt=" association">
+            </a><a href="https://example.com">
+                <img src="https://example.com/image.jpg" alt=" association">
+            </a>
+
+            </div>
+        <div class="accounts">
+            
+                <p>
+                    <ul class="none">
+                    <li class="account1">
+                        <i class="fa fa-envelope fa-1x">
+                <span class="contact-text gmail"><img src="https://cdn-icons-png.flaticon.com/128/2965/2965306.png" alt="mail icon" width="30">
+                <a href="mailto:yourmail@gmail.com" title="Send me an email">
+                    </a>
+                </span>
+            </i>
+                    </li>
+                    <li class="account1">
+                        <i class="fa fa-whatsapp fa-1x">
+                <span class="contact-text phone"><img src="https://cdn-icons-png.flaticon.com/128/3992/3992601.png" alt="WhatsApp Icon" width="30"><a href="https://wa.me/254113795338" target="_blank"></a> <br>
+                
+                </span>
+            </i>
+                    </li>
+                    <li class="account1">
+                        <i class="fa fa-whatsapp fa-1x">
+                <span class="contact-text phone"><img src="https://cdn-icons-png.flaticon.com/128/15015/15015947.png" alt="telegram icon" width="30"><a href="https://telegram.me/254113795338"></a> <br>
+                
+                </span>
+            </i>
+                    </li>
+                    <li class="account1">
+                        <i class="fa fa-phone fa-1x">
+                <span class="contact-text phone"><img src="https://cdn-icons-png.flaticon.com/128/5585/5585856.png" alt="telegram icon" width="30"><a href="">
+                </a>
+                </span>
+            </i>
+                    </li>
+                    </ul>
+            
+            <br><p> copyright &copy; 2025 Achievers tech solutions All rights reserved </p></div>
+    </div>
+    <script>
+        const images = document.querySelectorAll(".descriptions img");
+        let index = 0;
+
+
+
+        function changeImage() {
+            images[index].classList.remove("active");
+            index = (index + 1) % images.length;
+            images[index].classList.add("active");
+        }
+
+        setInterval(changeImage, 8000);
+
+
+        document.getElementById("orderButton").addEventListener("click", placeorder);
+
+
+function placeorder() {
+    let product = document.getElementById("product").value.trim();git remote add origin
+    let quantity = document.getElementById("quantity").value.trim();
+    let location = document.getElementById("location").value.trim();
+
+    if (!product || !quantity || !location) {
+        alert("Please confirm your order fields.");
+        return;
+    }
+
+    // Encode individual inputs
+    let encodedProduct = encodeURIComponent(product);
+    let encodedQuantity = encodeURIComponent(quantity);
+    let encodedLocation = encodeURIComponent(location);
+
+    // Construct the message
+    let message = `Hello Bazuu, I would like to place an order.%0A%0A- Product: ${encodedProduct}%0A- Quantity: ${encodedQuantity}%0A- Location of delivery: ${encodedLocation}%0A%0APlease confirm the availability and pricing.`;
+
+    let phone = "254727571204";
+    let url = `https://wa.me/${phone}?text=${message}`;
+
+    // Open WhatsApp
+    window.open(url, "_blank");
+
+    // Reload the page after a small delay (3 seconds)
+    setTimeout(() => {
+        location.reload();
+    }, 3000); // 3 seconds delay
+
+
+}
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
